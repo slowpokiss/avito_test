@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+.ad-fade-enter {
+  opacity: 0;
+  transform: translateX(20px);
+}
+
+.ad-fade-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all .25s ease;
+}
+
+.ad-fade-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.ad-fade-exit-active {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all .25s ease;
+}
+
+
+@layer base {
+  .btn-primary {
+    @apply cursor-pointer rounded-lg px-4 py-2 border font-medium transition;
+  }
+
+  .btn-green {
+    @apply bg-green-100 border-green-300 hover:bg-green-200;
+  }
+
+  .badge {
+    @apply px-2 py-1 rounded-md text-xs font-medium;
+  }
+
+  .ad-card {
+    @apply border rounded-xl p-4 flex items-center gap-4 hover:shadow cursor-pointer;
+  }
+
+  .ad-image {
+    @apply w-24 h-24 bg-gray-100 rounded-md overflow-hidden flex-shrink-0;
+  }
+
+  .text-small {
+    @apply text-gray-500 text-sm;
+  }
+
+  .text-title {
+    @apply text-lg font-semibold;
+  }
+
+  .text-price {
+    @apply text-gray-900 font-bold;
+  }
+
+  .input-primary {
+    @apply w-full border rounded-md px-2 py-1 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+  .text-greytext-grey {
+    @apply font-medium text-gray-700;
+  }
+}
